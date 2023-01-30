@@ -1,5 +1,4 @@
 import { ErrorsHandler } from '../../../../errors/ErrorsHandler';
-import { deleteFile } from '../../../../utils/file';
 import { ICompanyRepository } from '../../repositories/ICompanyRepository';
 
 export class DeleteCompanyUseCase {
