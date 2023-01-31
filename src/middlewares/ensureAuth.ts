@@ -31,7 +31,6 @@ export async function ensureAuthentication(
     const user = await usersRepository.findById(userId);
 
     if (!user) throw new ErrorsHandler('User does not exists', 401);
-    request.user = { id: userId };
 
     return next();
   } catch (error) {
