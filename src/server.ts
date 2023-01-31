@@ -30,6 +30,10 @@ app.use(
   express.static(resolve(__dirname, '../uploads/assetsPictures'))
 );
 
+app.get('/', (request, response) => {
+  return response.status(200).send('App Challenge');
+});
+
 app.use(router);
 
 app.use(
