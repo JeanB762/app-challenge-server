@@ -22,6 +22,9 @@ app.use((0, cors_1.default)());
 app.use('/api-docs', swagger_ui_express_1.default.serve, swagger_ui_express_1.default.setup(swagger_json_1.default));
 app.use('/avatar', express_1.default.static((0, path_1.resolve)(__dirname, '../uploads/avatar')));
 app.use('/assetsPictures', express_1.default.static((0, path_1.resolve)(__dirname, '../uploads/assetsPictures')));
+app.get('/', (request, response) => {
+    return response.status(200).send('App Challenge');
+});
 app.use(routes_1.router);
 app.use((error, request, response, next) => {
     if (error instanceof ErrorsHandler_1.ErrorsHandler)

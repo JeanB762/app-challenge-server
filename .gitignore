@@ -4,3 +4,4 @@ node_modules
 
 uploads/assetsPictures/*
 uploads/avatar/*
+.vercel
