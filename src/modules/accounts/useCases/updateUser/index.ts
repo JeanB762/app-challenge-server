@@ -7,6 +7,6 @@ export default (): UpdateUserController => {
   const usersRepository = new MongoUsersRepository();
   const updateUserUseCase = new UpdateUserUseCase(usersRepository);
   const updateUserController = new UpdateUserController(updateUserUseCase);
-
+  console.log('asdfasd');
   return updateUserController;
 };
